@@ -29,6 +29,7 @@ public class RozetkaPutProductToCartTest extends BaseUiTest {
         productPage.waitUntilProductTitleDisplayed()
                 .checkProductTitle(SEARCH_PRODUCT)
                 .waiteUntilBuyButtonDisplayed()
+                .checkButtonIsEnables()
                 .pressBuyButton();
     }
 }

@@ -18,9 +18,9 @@ public class ProductPage {
         return this;
     }
 
-        public ProductPage checkProductTitle(String title) {
-            $(PRODUCT_TITLE).shouldHave(text(title));
-            return this;
+    public ProductPage checkProductTitle(String title) {
+        $(PRODUCT_TITLE).shouldHave(text(title));
+        return this;
     }
 
     public ProductPage waiteUntilBuyButtonDisplayed() {
@@ -28,6 +28,10 @@ public class ProductPage {
         return this;
     }
 
+    public ProductPage checkButtonIsEnables() {
+        $(BUY_BUTTON).isEnabled();
+        return this;
+    }
 
     public ProductPage pressBuyButton() {
         $(BUY_BUTTON).click();
