@@ -1,5 +1,6 @@
 package tests.ui;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import configreader.FrameworkProperties;
@@ -8,16 +9,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import tests.BaseTest;
 
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.util.Map;
 
-public class BaseUiTest extends BaseTest {
+public class BaseUiTest {
 
     @BeforeMethod
     public void baseUiSetup() throws MalformedURLException {
+        Configuration.timeout = 20000;
 
         FrameworkProperties frameworkProperties =
                 ConfigFactory.create(FrameworkProperties.class);
