@@ -1,13 +1,7 @@
 package Rozetka.pages;
 
-import Rozetka.fragments.Header;
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-
-import java.util.List;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -36,7 +30,7 @@ public class ResultPage {
     }
 
     public ResultPage selectProduct() {
-        $$(PRODUCTS_LIST).get(1).click();
+        $$(PRODUCTS_LIST).get(0).click();
         return this;
     }
 }

@@ -64,7 +64,7 @@ public class iTunesSearchApiTest extends BaseApiTest {
         Assert.assertTrue(searchResultDto.getResults().stream().allMatch(result -> result.getCountry().equals("USA")));
     }
 
-    @Test(description = "Search with required parameters and media = audiobook should return status code: 200 and objects where wrapperType is audiobook")
+    @Test(description = "Search with required parameters and media should return status code: 200 and objects where wrapperType has appropriate value")
     public void searchWithRequiredParametersAndMediaWithValidValue() throws JsonProcessingException {
         JsonPath jsonPath = given()
                 .spec(requestSpecification)
