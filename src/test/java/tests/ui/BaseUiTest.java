@@ -46,6 +46,4 @@ public class BaseUiTest {
     public void closedDriver() {
         WebDriverRunner.closeWebDriver();
     }
-
-
 }
