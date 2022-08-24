@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Rozetka" verbose="1">
+    <test name="Rozetka all necessary field exists on the login form">
+        <classes>
+            <class name="tests.ui.Rozetka.RozetkaLoginFormFieldsTest"/>
+        </classes>
+    </test>
+    <test name="Rozetka put product to the cart">
+        <classes>
+            <class name="tests.ui.Rozetka.RozetkaPutProductToCartTest"/>
+        </classes>
+    </test>
+</suite>
