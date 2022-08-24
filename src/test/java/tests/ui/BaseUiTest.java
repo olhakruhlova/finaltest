@@ -6,9 +6,8 @@ import configreader.FrameworkProperties;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import tests.BaseTest;
 
 import java.net.MalformedURLException;
@@ -17,7 +16,7 @@ import java.util.Map;
 
 public class BaseUiTest extends BaseTest {
 
-    @BeforeClass
+    @BeforeMethod
     public void baseUiSetup() throws MalformedURLException {
 
         FrameworkProperties frameworkProperties =
@@ -42,9 +41,9 @@ public class BaseUiTest extends BaseTest {
         }
     }
 
-    @AfterClass
-    public void tearDown() {
-        Selenide.closeWebDriver();
+    @AfterMethod
+    public void closedDriver() {
+        WebDriverRunner.closeWebDriver();
     }
 
 

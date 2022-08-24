@@ -9,6 +9,7 @@ import tests.ui.BaseUiTest;
 public class RozetkaPutProductToCartTest extends BaseUiTest {
 
     private static final String SEARCH_PRODUCT = "Планшет Samsung Galaxy Tab A7";
+
     @Test
     public void putProductToCart() {
         Header header = new Header();
@@ -17,17 +18,17 @@ public class RozetkaPutProductToCartTest extends BaseUiTest {
                 .pressEnter();
 
         ResultPage resultPage = new ResultPage();
- resultPage.waitUntilResultTitleDisplayed()
-                      .checkResultTitle(SEARCH_PRODUCT);
+        resultPage.waitUntilResultTitleDisplayed()
+                .checkResultTitle(SEARCH_PRODUCT);
 
         resultPage.checkListMoreThanOneElement()
                 .selectProduct();
 
 
         ProductPage productPage = new ProductPage();
-  productPage.waitUntilProductTitleDisplayed()
-         .checkProductTitle(SEARCH_PRODUCT)
-              .waiteUntilBuyButtonDisplayed()
+        productPage.waitUntilProductTitleDisplayed()
+                .checkProductTitle(SEARCH_PRODUCT)
+                .waiteUntilBuyButtonDisplayed()
                 .pressBuyButton();
     }
 }
