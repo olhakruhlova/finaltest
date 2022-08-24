@@ -17,4 +17,7 @@ public interface FrameworkProperties extends Config {
 
     @Key("driver.browserVersion")
     String browserVersion();
+
+    @Key("api.baseUrl")
+    String apiBaseUrl();
 }
